@@ -1,0 +1,89 @@
+body{
+    text-align: center;
+    margin-top:100px;
+    background-image: linear-gradient(76deg, #a9d16b, #9dd77f, #92dc93, #8ae0a6, #85e3b8, #82e6c1, #80e9c9, #7eecd2, #78f0d5, #71f4d9, #68f7dc, #5ffbe0);
+    display:flex;
+    justify-content: center;
+    
+}
+.box
+{
+    
+    width:30%;
+    box-sizing: border-box;
+    border-radius: 9px;
+    background: linear-gradient(91deg,#00224D,#000000);
+    min-height: 235px;
+}
+#searchBar{
+    box-sizing: border-box;
+    width:75%;
+    height:35px;
+    border-radius: 15px;
+    border:none;
+    outline:none;
+    margin:7px;
+    padding-left:12px;
+    font-size: 16px;
+}
+
+#AddBtn{
+    
+    height:35px;
+    width:15%;
+    border-radius:15px;
+    border:none;
+    padding:2px;
+    font-size: 16px;
+    background: linear-gradient(92deg,yellow,#C69749);
+}
+
+#AddBtn:hover{
+   background: linear-gradient(89deg,#FF204E,#b81818);
+   color:white;
+   cursor:pointer;
+   
+
+}
+.listItems{
+    color:white;
+    list-style: none;
+    /* position: fixed; */
+   
+}
+
+#dltBtn{
+    background-color: #FC6736;
+    border:none;
+    border-radius: 5px;
+    color:black;
+    cursor:pointer;
+    width:30px;
+    height:32px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    position:absolute;
+    left:887px;
+    
+}
+#doneBtn{
+    background-color: #92dc93;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    width:10%;
+    height:32px;
+    margin-bottom:8px;
+    font-size:15px;
+    
+}
+
+#doneBtn:hover{
+    background-color: #61f863;
+}
+
+#dltBtn:hover{
+    background-color: #eb430b;
+}
+
+
