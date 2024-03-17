@@ -1,5 +1,9 @@
 var listItems=document.getElementById("listItems")
 var inputBox=document.getElementById("inputBox");
+inputBox.addEventListener("keypress",function(event){
+    if(event.key=="Enter")
+        tasksAdd();
+})
 function tasksAdd(){
         if(inputBox.value=="")
         {
