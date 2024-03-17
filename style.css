@@ -89,6 +89,6 @@ ul li span:hover{
 
 @media only screen and (max-width:600px) {
     .box{
-       width:400px;
+       width:350px;
     }
 }

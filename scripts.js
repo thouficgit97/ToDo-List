@@ -20,10 +20,10 @@ function tasksAdd(){
             var span=document.createElement("span");
             span.innerHTML="<button id=\"dltBtn>\" onclick=\"dltTasks(event)\">❌</button>";
             li.appendChild(span);
+            count.textContent=++tasksCount;
         }
         inputBox.value="";
-        tasksCount++;
-        count.textContent=tasksCount;
+        
         storeTasks();
 }
 
@@ -32,6 +32,7 @@ function dltTasks(event)
     event.target.parentElement.parentElement.remove();
     
     count.textContent=--tasksCount;
+
     storeTasks();
 }
 
