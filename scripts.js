@@ -1,33 +1,36 @@
-var list=document.querySelector(".listItems")
-var text=document.getElementById("searchBar");
-function Add(){
-   
-    var task=document.createElement("p");
-    task.innerHTML+=text.value;
-    
-    // task.innerHTML+="<button onclick=\"Done()\" id=\"doneBtn\">✔</button> ";`
-
-     task.innerHTML+="&nbsp";
-    task.innerHTML+="<button id=\"dltBtn\" onclick=\"Delete(event)\">✖</button>";
-    if(text.value)
+var listItems=document.getElementById("listItems")
+var inputBox=document.getElementById("inputBox");
+function tasksAdd(){
+        if(inputBox.value=="")
         {
-          list.append(task);
+            alert("Enter Your Tasks!");
         }
-    else
-    {
-        alert("You have to Enter Something!")
-    }
-    text.value="";
-    
+        else
+        {
+            var li=document.createElement("li");
+            li.innerHTML=inputBox.value;
+            listItems.appendChild(li);
+            var span=document.createElement("span");
+            span.innerHTML="<button id=\"dltBtn>\" onclick=\"dltTasks(event)\">✖</button>";
+            li.appendChild(span);
+        }
+        inputBox.value="";
+        storeTasks();
 }
 
-function Done()
+function dltTasks(event)
 {
-    span.style.textDecoration="line-through";
+    event.target.parentElement.parentElement.remove();
+    storeTasks();
 }
-function Delete(event){
-    
-    event.target.parentElement.remove();
-    // event.target.remove();
+
+function storeTasks()
+{
+    localStorage.setItem("tasks",listItems.innerHTML);
 }
-//To Do List
+
+function displayTasks()
+{
+    listItems.innerHTML=localStorage.getItem("tasks");
+}
+displayTasks();
